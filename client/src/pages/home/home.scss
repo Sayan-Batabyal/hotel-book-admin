@@ -1,0 +1,17 @@
+.home{
+ display: flex;
+    
+   .mainpage{
+     flex:6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f2f3;
+      img{
+        -webkit-box-shadow: 2px 4px 10px 1px lightgray;
+            box-shadow: 2px 4px 10px 1px lightgray;
+            border-radius: 20px;
+      }
+   }
+
+}

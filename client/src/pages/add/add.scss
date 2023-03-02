@@ -1,0 +1,135 @@
+.add{
+    width: 100%;
+    display: flex;
+    .addContainer{
+        background-color: #f0f2f3;
+        flex:6;
+
+
+        .top{
+            background-color: #3E54AC;;
+            -webkit-box-shadow: 2px 4px 10px 1px lightgray;
+            box-shadow: 2px 4px 10px 1px lightgray;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 4px;
+
+            h1{
+                font-size: 30px;
+                padding: 20px;
+                color: white;
+            }
+        }
+
+        .bottom{
+            background-color: white;
+            min-height: 75vh;
+            -webkit-box-shadow: 2px 4px 10px 1px rgb(198, 192, 192);
+            box-shadow: 2px 4px 10px 1px lightgray;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 10px;
+          
+            .submit{
+                position: relative;
+                  top: 20px;
+                  left: 500px;
+                  width: 170px;
+                  padding: 10px 20px;
+                  font-size: 20px;
+                  color: white;
+                  background-color: #3E54AC;
+                  border: none;
+                  font-weight: bold;
+                  border-radius: 4px;
+                  &:hover
+                  {
+                    
+                    background-color:teal;
+                  
+                  }
+
+            }   
+
+
+
+            form{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                align-items: center;
+                justify-content: center;
+                .details{
+                    width: 500px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    padding: 40px;
+                    .formInput{
+                        width: 40%;
+                        
+                        input{
+                            font-weight: bold;
+                            padding: 2px;
+                            font-size: 20px;
+                            border:none;
+                            border-bottom: 3px solid  #d9ddec;;
+                            width: 100%;
+                            &:focus{
+                                outline: none;
+                                border-bottom: 3px solid black; 
+                            }
+                            &::placeholder{
+                                opacity: 0.7;
+                            }
+                        
+                            
+                        }
+
+                        .roomList{
+                           
+                           margin-top: 4px;
+                           border:none;
+                           font-size: 18px;
+                           width: 150px;
+                           padding: 7px;
+                           background-color: #3E54AC;
+                           color: white;
+                           font-weight: bold;
+                           border-radius: 4px;
+                           &:hover{
+                           
+                            background-color:teal ;
+                           }
+
+                         }
+                    }
+                }
+
+
+                .formInput{
+                     
+                    width: 40%;
+                    label{
+                        font-size: 18px;
+                            font-weight: bold;
+                            color: #7c89bc;
+                    }
+                    .date{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                       
+                      
+                    }
+
+
+                }
+            }
+
+        }
+    }
+
+      
+
+}

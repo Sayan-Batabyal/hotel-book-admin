@@ -1,0 +1,49 @@
+
+*{
+    user-select: none;    
+}
+.datatable{
+    padding: 20px;
+    height: 450px;
+    .action{
+
+        display: flex;
+        gap: 10px;
+         div{
+            cursor: pointer;
+            background-color:#3E54AC ;
+            color: white;
+            padding: 4px;
+            border-radius: 4px;
+            font-weight: bold;
+         }
+
+         .edit{
+            &:hover{
+                border: none;
+                background-color: orange;
+                color: white;
+            }
+         }
+
+         .delete{
+            &:hover{
+                border: none;
+                background-color: red;
+                color: white;
+            }
+         }
+    }
+
+    .data{
+        .header{
+            color:#01166b ;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        
+        font-weight: bold;
+        
+    }
+
+}

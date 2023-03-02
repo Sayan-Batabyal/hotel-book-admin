@@ -1,0 +1,34 @@
+.rooms{
+    display: flex;
+    width: 100%;
+    .roomContainer{
+        background-color: #f0f2f3;
+        flex:6;
+        .top{
+            background-color: #3E54AC;
+            
+            -webkit-box-shadow: 2px 4px 10px 1px lightgray;
+            box-shadow: 2px 4px 10px 1px lightgray;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 4px;
+
+            h1{
+                color: white;
+                font-size: 30px;
+                padding: 20px;
+                // color: lightslategray;
+            }
+        }
+
+
+        .table{
+            background-color: white;
+            -webkit-box-shadow: 2px 4px 10px 1px lightgray;
+            box-shadow: 2px 4px 10px 1px lightgray;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 4px;
+        }
+    }
+}
