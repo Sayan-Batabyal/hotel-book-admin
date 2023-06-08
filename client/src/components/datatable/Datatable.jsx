@@ -16,7 +16,7 @@ function Datatable() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/user/${id}`);
+      await axios.delete(`https://hotels-admin-api.cyclic.app/api/user/${id}`);
       toast.success("Booking Deleted",{theme:"colored",autoClose: 700,})
       setList(list.filter((item) => item._id !== id));
     } catch (err) {

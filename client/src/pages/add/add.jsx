@@ -64,7 +64,7 @@ const Add = () => {
     const newUser={...info,"startDate":`${days[0]}`,"endDate":`${days[1]}`,"room":"404","amount":`${noOfhrs*100}`}
     
     try{
-    await axios.post("/user",newUser)
+    await axios.post("https://hotels-admin-api.cyclic.app/api/user",newUser)
     toast.success("Booking Completed",{theme:"colored",autoClose: 1000})
     nav("/users")
     }

@@ -85,7 +85,7 @@ const Single = () => {
     const newUser={...info,"startDate":`${days[0]}`,"endDate":`${days[1]}`,"room":"404","amount":`${noOfhrs*100}`}
     
     try{
-    await axios.put(`/user/${userId}`,newUser)
+    await axios.put(`https://hotels-admin-api.cyclic.app/api/user/${userId}`,newUser)
     toast.success("User Updated",{theme:"colored",autoClose: 1000})
       nav(-1)
     }
