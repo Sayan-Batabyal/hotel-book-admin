@@ -5,11 +5,13 @@ import {useState} from 'react'
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import axios from "axios";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 
 
 const Add = () => {
-
+  const nav=useNavigate()
   const[info,setInfo]=useState({})
   const [date, setDate] = useState([
       {
@@ -18,11 +20,24 @@ const Add = () => {
         key: 'selection'
       }
     ]);
-
     const[price,setPrice]=useState(0)
+    
 
+    const getBookingDates=(date)=>{
+      let startDate=date.startDate;
+      let endDate=date.endDate;
+      const dates=[];
+      let curDate=new Date(startDate)
+      while(curDate<=endDate){
+         dates.push(new Date(startDate).getTime());
+         curDate.setDate(curDate.getDate()+1)
+      }
+      console.log(dates);
+    }
+     
+  
     const parseDate=(date)=>{
-
+      
       let startDate=date[0].startDate+' '
       let endDate=date[0].endDate+' '
       let start=startDate.split(' ').slice(1,4).join(' ')
@@ -33,7 +48,10 @@ const Add = () => {
   const handlechanges =(e)=>{
      setInfo(prev=>({...prev,[e.target.id]:e.target.value}))
   };
+
+
   const handleDateChange =(date)=>{
+    getBookingDates(date)
     setPrice((((date.endDate-date.startDate)/(1000*60*60))+24)*100)
  };   
 
@@ -47,9 +65,11 @@ const Add = () => {
     
     try{
     await axios.post("/user",newUser)
+    toast.success("Booking Completed",{theme:"colored",autoClose: 1000})
+    nav("/users")
     }
     catch(err){
-      alert("Please Fill All the Fields")
+      toast.error("Please Fill All the Fields",{theme:"colored"})
     }
   };
 

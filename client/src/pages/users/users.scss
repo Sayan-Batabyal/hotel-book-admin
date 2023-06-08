@@ -5,13 +5,25 @@
         background-color: #f0f2f3;
         flex:6;
         .top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             background-color: #3E54AC;
             -webkit-box-shadow: 2px 4px 10px 1px lightgray;
             box-shadow: 2px 4px 10px 1px lightgray;
             padding: 10px;
             margin: 20px;
             border-radius: 4px;
-
+            
+            .link{
+                padding: 5px 10px;
+                font-size: larger;
+                font-style: italic;
+                background:white ;
+                color: #3E54AC;
+                border-radius: 10px;
+                font-weight: bolder
+            }
             h1{
                 font-size: 30px;
                 padding: 20px;

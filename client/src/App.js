@@ -2,7 +2,8 @@ import Home from "./pages/home/home";
 import Users from "./pages/users/users";
 import Add from "./pages/add/add";
 import Single from "./pages/single/single";
-
+import {ToastContainer }  from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import {
   Route,
@@ -14,6 +15,7 @@ import Rooms from "./pages/rooms/Rooms";
 function App() {
   return (
     <div className="App">
+      <ToastContainer/>
      <BrowserRouter>
      <Routes>
          <Route path="/">
