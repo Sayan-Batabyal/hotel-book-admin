@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 function Datatable() {
   const [list, setList] = useState([]);
-  const { data } = useFetch("/user")
+  const { data } = useFetch("https://hotels-admin-api.cyclic.app/api/user")
 
   useEffect(() => {
     setList(data)
