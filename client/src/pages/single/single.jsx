@@ -14,7 +14,7 @@ import { toast } from 'react-toastify';
 const Single = () => {
   const nav=useNavigate()
   const {userId}=useParams()
-  const { data } = useFetch(`/user/${userId}`)
+  const { data } = useFetch(`https://hotels-admin-api.cyclic.app/api/user/${userId}`)
   const[info,setInfo]=useState({})
   const fname=useRef()
   const email=useRef()
