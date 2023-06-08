@@ -3,9 +3,10 @@ import dotenv from "dotenv"
 import mongoose from 'mongoose';
 import userRoute from './routes/users.js'
 import roomsRoute from './routes/rooms.js'
-
+import cors from "cors"
 const app=express()
 dotenv.config()
+
 
 const connect=async ()=>{
 try {
@@ -17,6 +18,7 @@ try {
   }
 };
 
+app.use(cors())
 app.use(express.json())
 
 app.use("/api/user",userRoute)
